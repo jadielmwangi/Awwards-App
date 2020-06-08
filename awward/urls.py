@@ -13,7 +13,8 @@ urlpatterns=[
     url(r'^new/post$', views.new_post, name='new_post'),
      
      url(r'^search/', views.search_results, name='search_results'),
-  
+    # url(r'^api/post/$', views.PostList.as_view()),
+    # url(r'^api/profile/$', views.ProfileList.as_view()),
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
