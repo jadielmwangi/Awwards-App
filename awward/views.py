@@ -5,7 +5,7 @@ from .models import Profile, Post
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from rest_framework.response import Response
 # from rest_framework.views import APIView
-# from .serializer import PostSerializer, ProfileSerializer
+# from .serializer import PostSerializer
 import datetime as dt
 from . forms import ProfileForm, PostForm
 def index(request):
