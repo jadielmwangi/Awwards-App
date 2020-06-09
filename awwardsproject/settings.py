@@ -217,10 +217,10 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STAR_RATINGS_RERATE = False
-STAR_RATINGS_RANGE=10
-STAR_RATINGS_STAR_HEIGHT=20
-STAR_RATINGS_STAR_WIDTH=20
+# STAR_RATINGS_RERATE = False
+# STAR_RATINGS_RANGE=10
+# STAR_RATINGS_STAR_HEIGHT=20
+# STAR_RATINGS_STAR_WIDTH=20
 
 
 
@@ -235,20 +235,21 @@ STATICFILES_DIR = [
 
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES':(
-        'rest_framework.authentication.TokenAuthentication',
-    )
-}
-
-
-
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## added this
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':(
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
