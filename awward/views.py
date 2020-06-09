@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from .models import Profile, Post
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from rest_framework.response import Response
+from .email import send_welcome_email
+
 # from rest_framework.views import APIView
 # from .serializer import PostSerializer
 import datetime as dt
